@@ -12,7 +12,8 @@ document.getElementById("enterBtn").addEventListener("click", function() {
   const petGreeting = document.getElementById("petGreeting");
 
   if (nameInput !== "") {
-    petGreeting.textContent = Woof! Hi, I'm ${nameInput}, your new companion! 🐶;
+    // use a proper template literal (backticks) so JS parses correctly
+    petGreeting.textContent = `Woof! Hi, I'm ${nameInput}, your new companion! 🐶`;
     petGreeting.classList.remove("hidden");
   } else {
     petGreeting.textContent = "Please enter a name first!";
